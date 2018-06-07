@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL maintainer="mkiukaji@gmail.com"
+LABEL maintainer="28403172+Mkiukaji@users.noreply.github.com"
 LABEL version="1.0"
 
 RUN mkdir -p /opt/certmon
