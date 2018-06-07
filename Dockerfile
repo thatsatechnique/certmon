@@ -1,7 +1,7 @@
 FROM python:3
 
 LABEL maintainer="28403172+Mkiukaji@users.noreply.github.com"
-LABEL version="1.0"
+LABEL version="2.0"
 
 RUN mkdir -p /opt/certmon
 COPY . /opt/certmon
