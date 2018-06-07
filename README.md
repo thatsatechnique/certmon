@@ -10,9 +10,6 @@ Default pass: certmonpassword
 
 For the love of all things secure, change your password.  No, there's nothing sensitive or non-public in here per-se, but please do it anyway :)
 
-Docker container: 
-`docker pull mkiukaji/certmon`
-
 Start container/app:
 `docker run -d -p 8080:8080 mkiukaji/certmon`
 
