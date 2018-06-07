@@ -13,7 +13,7 @@ For the love of all things secure, change your password.  No, there's nothing se
 Start container/app:
 `docker run -d -p 8080:8080 mkiukaji/certmon`
 
-Then browse to http://localhost:8080
+Then browse to http://localhost:8080  (or whereve you are hosting it)
 
 
 ## Terms of Use
