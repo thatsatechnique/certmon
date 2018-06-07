@@ -1,0 +1,17 @@
+{% extends "appbuilder/base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{("Welcome to CertMon v2.0.")}}</h1>
+    <p>{{("This app monitors certificate status, strength, and expiration via the Qualys SSL Labs API.")}}</p>
+    <p>{{("A periodic scan will be run every 24 hours that the app is running.  You can also kick off manual scans from this interface.")}}
+    
+
+
+
+    <p>{{("This tool works by sending assessment requests to remote SSL Labs servers and your server information will be shared with Qualys, but not publicly posted.")}}</p>
+    <p>{{("Please refer to ")}}<a href="https://www.ssllabs.com/downloads/Qualys_SSL_Labs_Terms_of_Use.pdf">this document</a>{{(" for detailed terms and conditions of use.")}}</p>
+  </div>
+</div>
+{% endblock %}
+
