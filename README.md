@@ -11,7 +11,7 @@ Default pass: certmonpassword
 For the love of all things secure, change your password.  No, there's nothing sensitive or non-public in here per-se, but please do it anyway :)
 
 Start container/app:
-`docker run -d -p 8080:8080 mkiukaji/certmon`
+`docker run -d -p 8080:8080 thatsatechnique/certmon`
 
 Then browse to http://localhost:8080  (or wherever you are hosting it)
 
