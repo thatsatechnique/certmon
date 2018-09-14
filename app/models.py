@@ -1,9 +1,10 @@
 from flask_appbuilder import Model
 from flask import Markup
 from flask_appbuilder.models.decorators import renders
-from flask_appbuilder.models.mixins import AuditMixin, FileColumn, ImageColumn
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
-from sqlalchemy.orm import relationship
+#from flask_appbuilder.models.mixins import AuditMixin, FileColumn, ImageColumn
+#from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, DateTime
+#from sqlalchemy.orm import relationship
 import datetime
 
 
