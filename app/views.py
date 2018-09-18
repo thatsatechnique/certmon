@@ -10,6 +10,7 @@ import datetime
 import time
 import atexit ###
 import sys
+from __future__ import print_function #ts print error in env_var
 from apscheduler.schedulers.background import BackgroundScheduler ###
 from apscheduler.triggers.interval import IntervalTrigger ###
 
@@ -32,7 +33,8 @@ def env_var(name):
     value = getenv(name, None)
 
     if value is None:
-        print("You must set the environment variable", name, file=sys.stderr)
+        #print("You must set the environment variable", name, file=sys.stderr)
+        print("You must set the environment variable " + name, file=sys.stderr)
         sys.exit(1)
 
     return value
