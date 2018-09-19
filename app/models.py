@@ -4,9 +4,8 @@ from flask_appbuilder.models.decorators import renders
 #from flask_appbuilder.models.mixins import AuditMixin, FileColumn, ImageColumn
 #from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy import Column, Integer, String, DateTime
-#from sqlalchemy.orm import relationship
+#from sqlalchemy.orm import relationship #test
 import datetime
-
 
 class Certificates(Model):
     id = Column(Integer, primary_key=True)
