@@ -1,6 +1,8 @@
-from flask import render_template, flash, Flask, redirect, request, url_for, jsonify, json, Markup
+#from flask import render_template, flash, Flask, redirect, request, url_for, jsonify, json, Markup
+from flask import render_template, flash, redirect
 from flask_appbuilder.models.sqla.interface import SQLAInterface
-from flask_appbuilder import ModelView, AppBuilder, expose, BaseView, has_access, SimpleFormView
+#from flask_appbuilder import ModelView, AppBuilder, expose, BaseView, has_access, SimpleFormView
+from flask_appbuilder import ModelView, expose, BaseView
 from flask_appbuilder.actions import action
 from app import appbuilder, db, app
 from .models import Certificates
@@ -12,7 +14,7 @@ import atexit ###
 import sys
 from __future__ import print_function #ts print error in env_var
 from apscheduler.schedulers.background import BackgroundScheduler ###
-from apscheduler.triggers.interval import IntervalTrigger ###
+#from apscheduler.triggers.interval import IntervalTrigger ###
 
 
 #### TODO: 
