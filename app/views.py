@@ -1,7 +1,6 @@
-#from flask import render_template, flash, Flask, redirect, request, url_for, jsonify, json, Markup
+from __future__ import print_function #ts print error in env_var
 from flask import render_template, flash, redirect
 from flask_appbuilder.models.sqla.interface import SQLAInterface
-#from flask_appbuilder import ModelView, AppBuilder, expose, BaseView, has_access, SimpleFormView
 from flask_appbuilder import ModelView, expose, BaseView
 from flask_appbuilder.actions import action
 from app import appbuilder, db, app
@@ -12,9 +11,7 @@ import datetime
 import time
 import atexit ###
 import sys
-from __future__ import print_function #ts print error in env_var
 from apscheduler.schedulers.background import BackgroundScheduler ###
-#from apscheduler.triggers.interval import IntervalTrigger ###
 
 
 #### TODO: 
@@ -112,9 +109,10 @@ class CertificateModelView(ModelView):
     'valid_to':'Valid To', 'expiration_formatter':'Expires In', 'key_value':'Key', 'sha256_fingerprint':'SHA1 Fingerprint'} 
     #page_size=25
     page_size=10
-    @action("scan_host", "Scan this host", "This scan may take a few minutes.  Page will reload when complete.  Please be patient...", "fa-question", single=False)
+    @action("test_function", "Scan this host", "This scan may take a few minutes.  Page will reload when complete.  Please be patient...", "fa-question", single=False)
     def scan_host(self, items):
         if isinstance(items, list):
+            redirect('/certificatemodelview/list/') ####ISSUE1
             for item in items:
                 r = requests.get('https://api.ssllabs.com/api/v2/analyze?host=' + item.dns_name + '&all=on')
                 data = r.json()
