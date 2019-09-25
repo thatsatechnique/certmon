@@ -18,7 +18,7 @@ CSRF_ENABLED = True
 # GLOBALS FOR APP Builder 
 #------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "CertMon v2.0"
+APP_NAME = "Certmon"
 
 # Uncomment to setup Setup an App icon
 #APP_ICON = "static/img/logo.jpg"
