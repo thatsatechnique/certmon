@@ -5,12 +5,12 @@ chardet==3.0.4
 click==6.7
 colorama==0.3.9
 defusedxml==0.5.0
-Flask==1.0
-Flask-AppBuilder==1.11.1
+Flask==1.1.1
+Flask-AppBuilder==2.0
 Flask-Babel==0.11.1
-Flask-Login==0.2.11
+Flask-Login==0.4.1
 Flask-OpenID==1.2.5
-Flask-SQLAlchemy==2.1
+Flask-SQLAlchemy==2.4.1
 Flask-WTF==0.14.2
 idna==2.6
 itsdangerous==0.24
