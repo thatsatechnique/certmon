@@ -1,3 +1,4 @@
+from __future__ import print_function #ts print error in env_var
 #from flask import render_template, flash, Flask, redirect, request, url_for, jsonify, json, Markup
 from flask import render_template, flash, redirect
 from flask_appbuilder.models.sqla.interface import SQLAInterface
@@ -12,7 +13,6 @@ import datetime
 import time
 import atexit ###
 import sys
-from __future__ import print_function #ts print error in env_var
 from apscheduler.schedulers.background import BackgroundScheduler ###
 #from apscheduler.triggers.interval import IntervalTrigger ###
 
@@ -110,9 +110,14 @@ class CertificateModelView(ModelView):
     add_columns = ['dns_name']
     label_columns = {'url_formatter':'Domain', 'endpoint_ip':'Endpoint IP', 'grade_formatter':'Grade', 'last_scan_dtg':'Last Scan', 'subject':'Subject', 'issuer':'Issuer', 'valid_from':'Valid From', \
     'valid_to':'Valid To', 'expiration_formatter':'Expires In', 'key_value':'Key', 'sha256_fingerprint':'SHA1 Fingerprint'} 
-    #page_size=25
     page_size=10
     @action("scan_host", "Scan this host", "This scan may take a few minutes.  Page will reload when complete.  Please be patient...", "fa-question", single=False)
+    ### ISSUE1
+    def temp(self, items):
+        scheduler.add_job(periodic_scan, 'date', datetime.datetime.utcnow().timestamp())
+        flash("Scan Started", 'warning')
+        return redirect('/certificatemodelview/list/')
+    ####
     def scan_host(self, items):
         if isinstance(items, list):
             for item in items:
