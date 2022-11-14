@@ -29,3 +29,4 @@ tzlocal==4.2
 urllib3==1.26.12
 Werkzeug==2.2.2
 WTForms==3.0.1
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
