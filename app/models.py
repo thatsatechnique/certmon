@@ -1,5 +1,5 @@
 from flask_appbuilder import Model
-from flask import Markup
+from markupsafe import Markup
 from flask_appbuilder.models.decorators import renders
 #from flask_appbuilder.models.mixins import AuditMixin, FileColumn, ImageColumn
 #from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
