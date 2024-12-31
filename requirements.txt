@@ -26,7 +26,7 @@ idna==3.10
 importlib_resources==6.4.5
 iniconfig==2.0.0
 itsdangerous==2.2.0
-Jinja2==3.1.4
+Jinja2==3.1.5
 jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
 limits==3.14.1
